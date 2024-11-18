@@ -1534,6 +1534,7 @@ section,
 --------------------------------------------------------------*/
 .team .person {
   position: relative;
+  cursor: pointer;
 }
 
 .team .person figure {
