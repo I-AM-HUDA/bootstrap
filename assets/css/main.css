@@ -230,7 +230,7 @@ h6 {
 .header {
   color: var(--default-color);
   color: var(--default-color);
-  background-color: rgba(0, 0, 0, 0.404); /* Adjust this value if needed */
+background-color: #116530;
   transition: all 0.5s;
   z-index: 997;
   width: 100%; /* Ensure full width */
@@ -496,13 +496,15 @@ h6 {
     display: block;
   }
 }
+
  /* Adjust this value if needed 
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: rgba(123, 141, 123, 0.678);
+  color: var(--default-color);
+  background-color: #116530;
   font-size: 14px;
   position: static;
   margin: 0%;
