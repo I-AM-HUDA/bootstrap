@@ -45,12 +45,12 @@
 
         <nav id="navmenu" class="navmenu d-none d-xl-flex">
           <ul>
-              <li><a href="earth.html" class="active"><b>HOME</b></a></li>
-              <li><a href="earthtoday.html"><b>EARTH TODAY</b></a></li>
-              <li><a href="earthmatters.html"><b>WHY IT MATTERS</b></a></li>
-              <li><a href="help.html"><b>HELP</b></a></li>
-              <li><a href="LOGIN.html">login</a></li>
-          </ul>
+            <li><a href="index.html" class="active"><b>HOME</b></a></li>
+            <li><a href="earthtoday.html"><b>EARTH TODAY</b></a></li>
+            <li><a href="earthmatters.html"><b>WHY IT MATTERS</b></a></li>
+            <li><a href="help.html"><b>HELP</b></a></li>
+            <li><a href="LOGIN.html">login</a></li>
+        </ul>>
       </nav>
 
         <button class="mobile-nav-toggle d-xl-none bi bi-list btn btn-outline-light" 
@@ -65,13 +65,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <ul>
-            <li><a href="index.html"><b>HOME</b></a></li>
-            <li><a href="about.html"><b>EARTH TODAY</b></a></li>
-            <li><a href="services.html"><b>WHY IT MATTERS</b></a></li>
-            <li><a href="contact.html"><b>HELP</b></a></li>
-            <li><a href="LOGIN.html">login</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html" class="active"><b>HOME</b></a></li>
+        <li><a href="earthtoday.html"><b>EARTH TODAY</b></a></li>
+        <li><a href="earthmatters.html"><b>WHY IT MATTERS</b></a></li>
+        <li><a href="help.html"><b>HELP</b></a></li>
+        <li><a href="LOGIN.html">login</a></li>
+    </ul>
     </div>
 </div>
 
@@ -186,121 +186,104 @@
 
 
     <!-- Team Section -->
-    <section class="team-15 team section" id="team">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>WORKING TOWARDS THE FUTURE</p>
-      </div><!-- End Section Title -->
-      <div class="content">
-        <div class="container">
-          <div class="row">
-            <div class="container mt-5">
-              <div class="row">
-                <!-- Team Member 1 -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="person text-center">
-                    <figure>
-                      <img src="assets/img/team/team-1.jpg" alt="Image" class="img-fluid rounded-circle team-img" 
-                           data-bs-toggle="popover" data-bs-html="true" 
-                           data-bs-content="
-                             <strong>Joshua Stefan</strong><br>
-                             <em>Farmer</em><br>
-                             Information about Joshua Stefan, the Farmer.">
-                      <div class="social mt-2">
-                        <a href="#"><span class="bi bi-facebook"></span></a>
-                        <a href="#"><span class="bi bi-twitter"></span></a>
-                        <a href="#"><span class="bi bi-linkedin"></span></a>
-                      </div>
-                    </figure>
-                    <div class="person-contents mt-3">
-                      <h3>Joshua Stefan</h3>
-                      <span class="position">Farmer</span>
-                    </div>
-                  </div>
+    <div class="content">
+      <div class="container mt-5">
+        <div class="row" id="team-container">
+          <!-- Team member cards will be injected here by JavaScript -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- Move the script here, at the end of the body -->
+    <script>
+      const teamData = [
+        {
+          name: "Joshua Stefan",
+          role: "Farmer",
+          info: "Information about Joshua Stefan, the Farmer.",
+          image: "assets/img/team/team-1.jpg",
+          social: {
+            facebook: "#",
+            twitter: "#",
+            linkedin: "#"
+          }
+        },
+        {
+          name: "Sheena Anderson",
+          role: "Marketing",
+          info: "Information about Sheena Anderson, Marketing.",
+          image: "assets/img/team/team-2.jpg",
+          social: {
+            facebook: "#",
+            twitter: "#",
+            linkedin: "#"
+          }
+        },
+        {
+          name: "Evan Smith",
+          role: "Content Specialist",
+          info: "Information about Evan Smith, Content Specialist.",
+          image: "assets/img/team/team-3.jpg",
+          social: {
+            facebook: "#",
+            twitter: "#",
+            linkedin: "#"
+          }
+        },
+        {
+          name: "Kaylie Jones",
+          role: "Accountant",
+          info: "Information about Kaylie Jones, the Accountant.",
+          image: "assets/img/team/team-4.jpg",
+          social: {
+            facebook: "#",
+            twitter: "#",
+            linkedin: "#"
+          }
+        }
+      ];
+    
+      const teamContainer = document.getElementById('team-container');
+    
+      teamData.forEach((member) => {
+        const memberCard = `
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="person text-center">
+              <figure>
+                <img src="${member.image}" alt="Image" class="img-fluid rounded-circle team-img" 
+                     data-bs-toggle="popover" data-bs-html="true" 
+                     data-bs-content="
+                       <strong>${member.name}</strong><br>
+                       <em>${member.role}</em><br>
+                       ${member.info}">
+                <div class="social mt-2">
+                  <a href="${member.social.facebook}"><span class="bi bi-facebook"></span></a>
+                  <a href="${member.social.twitter}"><span class="bi bi-twitter"></span></a>
+                  <a href="${member.social.linkedin}"><span class="bi bi-linkedin"></span></a>
                 </div>
-            
-                <!-- Repeat for other team members -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="person text-center">
-                    <figure>
-                      <img src="assets/img/team/team-2.jpg" alt="Image" class="img-fluid rounded-circle team-img" 
-                           data-bs-toggle="popover" data-bs-html="true" 
-                           data-bs-content="
-                             <strong>Sheena Anderson</strong><br>
-                             <em>Marketing</em><br>
-                             Information about Sheena Anderson, Marketing.">
-                      <div class="social mt-2">
-                        <a href="#"><span class="bi bi-facebook"></span></a>
-                        <a href="#"><span class="bi bi-twitter"></span></a>
-                        <a href="#"><span class="bi bi-linkedin"></span></a>
-                      </div>
-                    </figure>
-                    <div class="person-contents mt-3">
-                      <h3>Sheena Anderson</h3>
-                      <span class="position">Marketing</span>
-                    </div>
-                  </div>
-                </div>
-            
-                <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="person text-center">
-                    <figure>
-                      <img src="assets/img/team/team-3.jpg" alt="Image" class="img-fluid rounded-circle team-img" 
-                           data-bs-toggle="popover" data-bs-html="true" 
-                           data-bs-content="
-                             <strong>Evan Smith</strong><br>
-                             <em>Content Specialist</em><br>
-                             Information about Evan Smith, Content Specialist.">
-                      <div class="social mt-2">
-                        <a href="#"><span class="bi bi-facebook"></span></a>
-                        <a href="#"><span class="bi bi-twitter"></span></a>
-                        <a href="#"><span class="bi bi-linkedin"></span></a>
-                      </div>
-                    </figure>
-                    <div class="person-contents mt-3">
-                      <h3>Evan Smith</h3>
-                      <span class="position">Content Specialist</span>
-                    </div>
-                  </div>
-                </div>
-            
-                <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="person text-center">
-                    <figure>
-                      <img src="assets/img/team/team-4.jpg" alt="Image" class="img-fluid rounded-circle team-img" 
-                           data-bs-toggle="popover" data-bs-html="true" 
-                           data-bs-content="
-                             <strong>Kaylie Jones</strong><br>
-                             <em>Accountant</em><br>
-                             Information about Kaylie Jones, the Accountant.">
-                      <div class="social mt-2">
-                        <a href="#"><span class="bi bi-facebook"></span></a>
-                        <a href="#"><span class="bi bi-twitter"></span></a>
-                        <a href="#"><span class="bi bi-linkedin"></span></a>
-                      </div>
-                    </figure>
-                    <div class="person-contents mt-3">
-                      <h3>Kaylie Jones</h3>
-                      <span class="position">Accountant</span>
-                    </div>
-                  </div>
-                </div>
+              </figure>
+              <div class="person-contents mt-3">
+                <h3>${member.name}</h3>
+                <span class="position">${member.role}</span>
               </div>
             </div>
-            
-            <!-- Include Bootstrap Bundle JS -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-            
-            <!-- Initialize Popovers -->
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-                popoverTriggerList.forEach(function (popoverTriggerEl) {
-                  new bootstrap.Popover(popoverTriggerEl);
-                });
-              });
-            </script>
+          </div>
+        `;
+        teamContainer.innerHTML += memberCard;
+      });
+    </script>
+    
+    <!-- Initialize Bootstrap popovers -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        popoverTriggerList.forEach(function (popoverTriggerEl) {
+          new bootstrap.Popover(popoverTriggerEl);
+        });
+      });
+    </script>
+    
+      
       
       <!-- Add modals for each additional team member similarly, updating IDs and contents accordingly -->
     
